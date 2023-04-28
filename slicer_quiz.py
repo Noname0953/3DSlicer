@@ -53,18 +53,20 @@ Hippocampus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', '
 Sulcus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsLineNode', ' ')
 Nervus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 Dura_mater = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-fissura_longitudinalis_cerebri = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 cerebellum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 pons = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 chiasma_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tractus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tentorium_cerebelli = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-n_oculomotorious = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 n_trochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 a_carotisinterna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 a_vertebralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 a_basilaris = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 a_cerebriposterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sinus_transversus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+n_trigeminus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+n_vestibulocochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+n_fascialis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 # Set the position of the new node
 Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
@@ -74,18 +76,20 @@ Sulcus_lateralis.AddControlPoint(-37, -20, 11.6)
 Sulcus_lateralis.AddControlPoint(-63, -20, 11.6)
 Nervus_opticus.AddControlPoint(21.0266, 32.9091, -20.211)
 Dura_mater.AddControlPoint(-10.3420, 36.0077, 61.3329)
-fissura_longitudinalis_cerebri.AddControlPoint(-2.8249, -9.4460, 64.6917)
 cerebellum.AddControlPoint(0.5339,-54.6794,-27.6747)
 pons.AddControlPoint(0.0339,-25.9000,-27.6748)
 chiasma_opticus.AddControlPoint(-0.3038,5.3050,-13.6747)
 tractus_opticus.AddControlPoint(-9.5054,-3.8966,-9.1747)
 tentorium_cerebelli.AddControlPoint(-9.5054, -63.7734,-9.2014)
-n_oculomotorious.AddControlPoint(-8.6533,-7.8767,17.6671)
 n_trochlearis.AddControlPoint(11.2952,-36.2650,-10.1671)
 a_carotisinterna.AddControlPoint(-18.5652,-7.1370,-40.5675)
 a_vertebralis.AddControlPoint(-7.2983,-37.9725,-51.7110)
 a_basilaris.AddControlPoint(-7.8913,-18.9968,-39.2110)
 a_cerebriposterior.AddControlPoint(-9.8392,-8.8229,-13.6177)
+sinus_transversus.AddControlPoint(-15.9745,-90.0629,-32.9464)
+n_trigeminus.AddControlPoint(-17.3793,-24.3338,-25.2110)
+n_vestibulocochlearis.AddControlPoint(20.1049,-30.4617,-36.2110)
+n_fascialis.AddControlPoint(18.0032,-28.1689,-35.7110)
 
 # Define a dictionary that maps nodes to their names
 node_names = {
@@ -95,18 +99,20 @@ node_names = {
     Sulcus_lateralis: 'Sulcus Lateralis',
     Nervus_opticus: 'Nervus Opticus',
     Dura_mater: 'Dura mater',
-    fissura_longitudinalis_cerebri: 'Fissura Longitudinalis Cerebri',
     cerebellum: 'Cerebellum',
     pons: 'Pons',
     chiasma_opticus: 'Chiasma Opticus',
     tractus_opticus: 'Tractus Opticus',
     tentorium_cerebelli: 'Tentorium Cerebelli',
-    n_oculomotorious: 'N. oculomotorious',
     n_trochlearis: 'N. trochlearis - kolla horizontalsnittet och zooma in på pons!',
     a_carotisinterna: 'A. Carotis interna',
     a_vertebralis: 'A. vertebralis',
     a_basilaris: 'A. basilaris',
-    a_cerebriposterior: 'A. cerebri posterior'
+    a_cerebriposterior: 'A. cerebri posterior',
+    sinus_transversus: 'Sinus transversus',
+    n_trigeminus: 'N. trigeminus',
+    n_vestibulocochlearis: 'N. vestibulocochlearis',
+    n_fascialis: 'N. fascialis'
 }
 
 # Convert the collection to a Python list of nodes
@@ -116,18 +122,20 @@ Hippocampus,
 Sulcus_lateralis,
 Nervus_opticus,
 Dura_mater,
-fissura_longitudinalis_cerebri,
 cerebellum,
 pons,
 chiasma_opticus,
 tractus_opticus,
 tentorium_cerebelli,
-n_oculomotorious,
 n_trochlearis,
 a_carotisinterna,
 a_vertebralis,
 a_basilaris,
-a_cerebriposterior
+a_cerebriposterior,
+sinus_transversus,
+n_trigeminus,
+n_vestibulocochlearis,
+n_fascialis
 ]
 
 # Define a function to prompt the user to identify the structure associated with a given node
