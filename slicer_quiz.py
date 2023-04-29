@@ -14,6 +14,10 @@ def clear_all_markers():
 # Get the MRML scene
 scene = slicer.mrmlScene
 
+exvivo = slicer.util.getNode("Ex_vivo 500")
+invivo = slicer.util.getNode("In vivo 7T 500M")
+bigbrain = slicer.util.getNode("Big brain 400 ljus")
+
 clear_all_markers()
 error_structures = []
 
@@ -46,11 +50,10 @@ redLogic = red.sliceLogic()
 greenLogic = green.sliceLogic()
 yellowLogic = yellow.sliceLogic()
 
-# Create a new fiducial node
+# Creates fiducial nodes
 Ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 Corpus_callosum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 Hippocampus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-Sulcus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsLineNode', ' ')
 Nervus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 Dura_mater = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 cerebellum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -67,13 +70,21 @@ sinus_transversus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNo
 n_trigeminus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 n_vestibulocochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 n_fascialis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nucleus_caudatus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+putamen = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+thalamus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+capsula_interna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+capsula_externa = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+capsula_extrema = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+ventriculus_quartus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+globus_pallidus_externa = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+globus_pallidus_interna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
-# Set the position of the new node
+# Set the positions of nodes
+#28-04-2023
 Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
-Corpus_callosum.AddControlPoint(0, -11, 26)
+Corpus_callosum.AddControlPoint(0.0357, -10.7357, 24.7500)
 Hippocampus.AddControlPoint(-23.25, -11.41, -19.19)
-Sulcus_lateralis.AddControlPoint(-37, -20, 11.6)
-Sulcus_lateralis.AddControlPoint(-63, -20, 11.6)
 Nervus_opticus.AddControlPoint(21.0266, 32.9091, -20.211)
 Dura_mater.AddControlPoint(-10.3420, 36.0077, 61.3329)
 cerebellum.AddControlPoint(0.5339,-54.6794,-27.6747)
@@ -90,13 +101,22 @@ sinus_transversus.AddControlPoint(-15.9745,-90.0629,-32.9464)
 n_trigeminus.AddControlPoint(-17.3793,-24.3338,-25.2110)
 n_vestibulocochlearis.AddControlPoint(20.1049,-30.4617,-36.2110)
 n_fascialis.AddControlPoint(18.0032,-28.1689,-35.7110)
+#29-04-2023
+nucleus_caudatus.AddControlPoint(11.6773,11.2457,11.6539)
+putamen.AddControlPoint(24.7232,-0.6141,11.6539)
+thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
+capsula_interna.AddControlPoint(16.4213,10.6528,5.9804)
+capsula_externa.AddControlPoint(29.0020,5.6287,4.4804)
+capsula_extrema.AddControlPoint(31.0476,7.5464,1.2135)
+ventriculus_quartus.AddControlPoint(0.2031,-33.7104,-9.4840)
+globus_pallidus_externa.AddControlPoint(15.7509,4.3509,-3.3735)
+globus_pallidus_interna.AddControlPoint(17.0080,-3.8205,-3.3735)
 
 # Define a dictionary that maps nodes to their names
 node_names = {
     Ventriculus_lateralis: 'Ventriculus Lateralis',
     Corpus_callosum: 'Corpus Callosum',
     Hippocampus: 'Hippocampus',
-    Sulcus_lateralis: 'Sulcus Lateralis',
     Nervus_opticus: 'Nervus Opticus',
     Dura_mater: 'Dura mater',
     cerebellum: 'Cerebellum',
@@ -104,7 +124,7 @@ node_names = {
     chiasma_opticus: 'Chiasma Opticus',
     tractus_opticus: 'Tractus Opticus',
     tentorium_cerebelli: 'Tentorium Cerebelli',
-    n_trochlearis: 'N. trochlearis - kolla horizontalsnittet och zooma in på pons!',
+    n_trochlearis: 'N. trochlearis',
     a_carotisinterna: 'A. Carotis interna',
     a_vertebralis: 'A. vertebralis',
     a_basilaris: 'A. basilaris',
@@ -112,14 +132,20 @@ node_names = {
     sinus_transversus: 'Sinus transversus',
     n_trigeminus: 'N. trigeminus',
     n_vestibulocochlearis: 'N. vestibulocochlearis',
-    n_fascialis: 'N. fascialis'
+    n_fascialis: 'N. fascialis',
+    nucleus_caudatus: 'Nucleus caudatus',
+    putamen: 'Putamen',
+    thalamus: 'Thalamus',
+    capsula_interna: 'Capsula interna',
+    capsula_externa: 'Capsula externa',
+    capsula_extrema: 'Capsula extrema',
+    ventriculus_quartus: 'Ventriculus quartus',
+    globus_pallidus_externa: 'Globus Pallidus Externa',
+    globus_pallidus_interna: 'Globus Pallidus Interna'
 }
 
-# Convert the collection to a Python list of nodes
-my_nodes = [Ventriculus_lateralis,
-Corpus_callosum,
+invivo_allviews_list = [Ventriculus_lateralis,
 Hippocampus,
-Sulcus_lateralis,
 Nervus_opticus,
 Dura_mater,
 cerebellum,
@@ -135,8 +161,22 @@ a_cerebriposterior,
 sinus_transversus,
 n_trigeminus,
 n_vestibulocochlearis,
-n_fascialis
-]
+n_fascialis,
+nucleus_caudatus,
+putamen,
+thalamus,
+capsula_interna,
+capsula_externa,
+capsula_extrema,
+ventriculus_quartus]
+
+exvivo_allviews_list = [globus_pallidus_externa,
+globus_pallidus_interna]
+
+bigbrain_allviews_list = [Corpus_callosum]
+
+# Convert the collection to a Python list of nodes
+my_nodes = bigbrain_allviews_list + invivo_allviews_list + exvivo_allviews_list
 
 # Define a function to prompt the user to identify the structure associated with a given node
 def quiz_node(node):
@@ -181,7 +221,7 @@ def quiz_node(node):
         elif user_input == 'f':
             # Gives statistics on current quiz run
             if right+wrong == 0:
-                print("Division med 0 inte tillåtet!")
+                print("Du måste svara på någon struktur innan du kan få ut statistik!")
             else:
                 print(str(right) + " rätt")
                 print(str(wrong) + " fel")
@@ -200,11 +240,32 @@ def quiz_node(node):
                 print(str(len(my_nodes))+" strukturer kvar i listan.")
         else:
             user_input = 'y'
-# Main loop for the quiz
 right = 0
 wrong = 0
-while True:
-    # Select a random node from the list of nodes
-    node = random.choice(my_nodes)
-    # Quiz the user on the structure associated with the node
-    quiz_node(node)
+def main():
+    while True:
+        # Select a random node from the list of nodes
+        node = random.choice(my_nodes)
+        # Changes view based on node
+        if node in invivo_allviews_list:
+            slicer.util.setSliceViewerLayers(background=invivo)
+        if node in exvivo_allviews_list:
+            slicer.util.setSliceViewerLayers(background=exvivo)
+        if node in bigbrain_allviews_list:
+            slicer.util.setSliceViewerLayers(background=bigbrain)
+        #if node in horizontal_list:
+        #    layoutManager.setLayout(6)
+        #if node in sagittal_list:
+        #    layoutManager.setLayout(7)
+        #if node in coronal_list:
+        #    layoutManager.setLayout(8)
+        #if node in horizontal_sagital_list:
+        #    layoutManager.setLayout(29)
+        else:
+            layoutManager.setLayout(0)
+        # Quiz the user on the structure associated with the node
+        quiz_node(node)
+
+if __name__ == "__main__":
+  #Run as main program
+  main()
