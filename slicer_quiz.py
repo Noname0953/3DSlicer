@@ -108,7 +108,7 @@ thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
 capsula_interna.AddControlPoint(16.4213,10.6528,5.9804)
 capsula_externa.AddControlPoint(29.0020,5.6287,4.4804)
 capsula_extrema.AddControlPoint(31.0476,7.5464,1.2135)
-ventriculus_quartus.AddControlPoint(0.2031,-33.7104,-9.4840)
+ventriculus_quartus.AddControlPoint(0.329,-38.710,-20.382)
 globus_pallidus_externa.AddControlPoint(15.7509,4.3509,-3.3735)
 globus_pallidus_interna.AddControlPoint(17.0080,-3.8205,-3.3735)
 
