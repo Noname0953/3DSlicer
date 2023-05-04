@@ -79,6 +79,7 @@ capsula_extrema = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode
 ventriculus_quartus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 globus_pallidus_externa = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 globus_pallidus_interna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+aqueductus_cerebri = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 # Set the positions of nodes
 #28-04-2023
@@ -108,9 +109,10 @@ thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
 capsula_interna.AddControlPoint(16.4213,10.6528,5.9804)
 capsula_externa.AddControlPoint(29.0020,5.6287,4.4804)
 capsula_extrema.AddControlPoint(31.0476,7.5464,1.2135)
-ventriculus_quartus.AddControlPoint(0.2031,-33.7104,-9.4840)
+ventriculus_quartus.AddControlPoint(0.329,-41.764,-25.818)
 globus_pallidus_externa.AddControlPoint(15.7509,4.3509,-3.3735)
 globus_pallidus_interna.AddControlPoint(17.0080,-3.8205,-3.3735)
+aqueductus_cerebri.AddControlPoint(0.169,-31.340,-5.577)
 
 # Define a dictionary that maps nodes to their names
 node_names = {
@@ -141,7 +143,8 @@ node_names = {
     capsula_extrema: 'Capsula extrema',
     ventriculus_quartus: 'Ventriculus quartus',
     globus_pallidus_externa: 'Globus Pallidus Externa',
-    globus_pallidus_interna: 'Globus Pallidus Interna'
+    globus_pallidus_interna: 'Globus Pallidus Interna',
+    aqueductus_cerebri: 'Aqueductus cerebri'
 }
 
 invivo_allviews_list = [Ventriculus_lateralis,
@@ -168,7 +171,8 @@ thalamus,
 capsula_interna,
 capsula_externa,
 capsula_extrema,
-ventriculus_quartus]
+ventriculus_quartus,
+aqueductus_cerebri]
 
 exvivo_allviews_list = [globus_pallidus_externa,
 globus_pallidus_interna]
