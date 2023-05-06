@@ -95,19 +95,12 @@ hippocampus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', '
 
 
 Ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-
 Nervus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-
 cerebellum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 pons = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-
 tractus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tentorium_cerebelli = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 n_trochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-
-
-
-
 sinus_transversus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 n_trigeminus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 n_vestibulocochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -161,18 +154,13 @@ globus_pallidus_interna.AddControlPoint(17.0080,-3.8205,-3.3735)
 hippocampus.AddControlPoint(-23.944,-14.091,-18.506)
 
 
-
 Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
-
 Nervus_opticus.AddControlPoint(21.0266, 32.9091, -20.211)
-
 cerebellum.AddControlPoint(0.5339,-54.6794,-27.6747)
 pons.AddControlPoint(0.0339,-25.9000,-27.6748)
-
 tractus_opticus.AddControlPoint(-9.5054,-3.8966,-9.1747)
 tentorium_cerebelli.AddControlPoint(-9.5054, -63.7734,-9.2014)
 n_trochlearis.AddControlPoint(11.2952,-36.2650,-10.1671)
-
 sinus_transversus.AddControlPoint(-15.9745,-90.0629,-32.9464)
 n_trigeminus.AddControlPoint(-17.3793,-24.3338,-25.2110)
 n_vestibulocochlearis.AddControlPoint(20.1049,-30.4617,-36.2110)
@@ -182,7 +170,6 @@ nucleus_caudatus.AddControlPoint(11.6773,11.2457,11.6539)
 putamen.AddControlPoint(24.7232,-0.6141,11.6539)
 thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
 ventriculus_quartus.AddControlPoint(0.329,-41.764,-25.818)
-
 
 # Define a dictionary that maps nodes to their names
 node_names = {
@@ -230,19 +217,12 @@ node_names = {
     
     
     Ventriculus_lateralis: 'Ventriculus Lateralis',
-    
     Nervus_opticus: 'Nervus Opticus',
-    
     cerebellum: 'Cerebellum',
     pons: 'Pons',
-    
     tractus_opticus: 'Tractus Opticus',
     tentorium_cerebelli: 'Tentorium Cerebelli',
     n_trochlearis: 'N. trochlearis',
-   
-    
-
-
     sinus_transversus: 'Sinus transversus',
     n_trigeminus: 'N. trigeminus',
     n_vestibulocochlearis: 'N. vestibulocochlearis',
@@ -286,30 +266,21 @@ invivo_allviews_list = [a_basilaris,
                         
                         
                         
-Ventriculus_lateralis,
-
-Nervus_opticus,
-
-cerebellum,
-pons,
-
-tractus_opticus,
-tentorium_cerebelli,
-n_trochlearis,
-
-
-
-
-sinus_transversus,
-n_trigeminus,
-n_vestibulocochlearis,
-n_fascialis,
-nucleus_caudatus,
-putamen,
-thalamus,
-
-
-ventriculus_quartus]
+                        Ventriculus_lateralis,
+                        Nervus_opticus,
+                        cerebellum,
+                        pons,
+                        tractus_opticus,
+                        tentorium_cerebelli,
+                        n_trochlearis,
+                        sinus_transversus,
+                        n_trigeminus,
+                        n_vestibulocochlearis,
+                        n_fascialis,
+                        nucleus_caudatus,
+                        putamen,
+                        thalamus,
+                        ventriculus_quartus]
 
 exvivo_allviews_list = [capsula_extrema,
                        capsula_externa,
