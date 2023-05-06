@@ -51,6 +51,21 @@ greenLogic = green.sliceLogic()
 yellowLogic = yellow.sliceLogic()
 
 # Creates fiducial nodes
+a_basilaris = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+a_carotisinterna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+a_cerebelli_inferior_anterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+a_cerebelli_inferior_posterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+a_cerebelli_superior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+a_cerebri_anterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+a_cerebri_media = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+a_cerebri_posterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+a_communicans_anterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+a_communicans_posterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+a_vertebralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+
+
+
+
 Ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 Corpus_callosum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 Hippocampus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -62,10 +77,10 @@ chiasma_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode
 tractus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tentorium_cerebelli = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 n_trochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-a_carotisinterna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-a_vertebralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-a_basilaris = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-a_cerebriposterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+
+
+
+
 sinus_transversus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 n_trigeminus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 n_vestibulocochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -82,7 +97,21 @@ globus_pallidus_interna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFidu
 aqueductus_cerebri = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 # Set the positions of nodes
-#28-04-2023
+a_basilaris.AddControlPoint(2.117,-13.342,-36.126)
+a_carotisinterna.AddControlPoint(-18.5652,-7.1370,-40.5675)
+a_cerebelli_inferior_anterior.AddControlPoint(-2.557,-15.766,-34.401)
+a_cerebelli_inferior_posterior.AddControlPoint(-8.730,-39.024,-43.589)
+a_cerebelli_superior.AddControlPoint(8.870,-8.599,-20.914)
+a_cerebri_anterior.AddControlPoint(3.994,4.618,-10.281)
+a_cerebri_media.AddControlPoint(-22.975,0.085,-8.562)
+a_cerebri_posterior.AddControlPoint(-6.432,-7.957,-13.319)
+a_communicans_anterior.AddControlPoint(0.647,11.978,-13.922)
+a_communicans_posterior.AddControlPoint(-9.190,-2.305,-17.512)
+a_vertebralis.AddControlPoint(-7.2983,-37.9725,-51.7110)
+
+
+
+
 Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
 Corpus_callosum.AddControlPoint(0.0357, -10.7357, 24.7500)
 Hippocampus.AddControlPoint(-23.25, -11.41, -19.19)
@@ -94,10 +123,10 @@ chiasma_opticus.AddControlPoint(-0.3038,5.3050,-13.6747)
 tractus_opticus.AddControlPoint(-9.5054,-3.8966,-9.1747)
 tentorium_cerebelli.AddControlPoint(-9.5054, -63.7734,-9.2014)
 n_trochlearis.AddControlPoint(11.2952,-36.2650,-10.1671)
-a_carotisinterna.AddControlPoint(-18.5652,-7.1370,-40.5675)
-a_vertebralis.AddControlPoint(-7.2983,-37.9725,-51.7110)
-a_basilaris.AddControlPoint(-7.8913,-18.9968,-39.2110)
-a_cerebriposterior.AddControlPoint(-9.8392,-8.8229,-13.6177)
+
+
+
+
 sinus_transversus.AddControlPoint(-15.9745,-90.0629,-32.9464)
 n_trigeminus.AddControlPoint(-17.3793,-24.3338,-25.2110)
 n_vestibulocochlearis.AddControlPoint(20.1049,-30.4617,-36.2110)
@@ -116,6 +145,21 @@ aqueductus_cerebri.AddControlPoint(0.169,-31.340,-5.577)
 
 # Define a dictionary that maps nodes to their names
 node_names = {
+    a_basilaris: 'A. basilaris',
+    a_carotisinterna: 'A. carotis interna',
+    a_cerebelli_inferior_anterior: 'A. cerebelli inferior anterior',
+    a_cerebelli_inferior_posterior: 'A. cerebelli inferior posterior',
+    a_cerebelli_superior: 'A. cerebelli superior',
+    a_cerebri_anterior: 'A. cerebri anterior',
+    a_cerebri_media: 'A. cerebri media',
+    a_cerebri_posterior: 'A. cerebri posterior',
+    a_communicans_anterior: 'A. communicans posterior',
+    a_communicans_posterior: 'A. communicans posterior',
+    a_vertebralis: 'A. vertebralis',
+    
+    
+    
+    
     Ventriculus_lateralis: 'Ventriculus Lateralis',
     Corpus_callosum: 'Corpus Callosum',
     Hippocampus: 'Hippocampus',
@@ -127,10 +171,10 @@ node_names = {
     tractus_opticus: 'Tractus Opticus',
     tentorium_cerebelli: 'Tentorium Cerebelli',
     n_trochlearis: 'N. trochlearis',
-    a_carotisinterna: 'A. Carotis interna',
-    a_vertebralis: 'A. vertebralis',
-    a_basilaris: 'A. basilaris',
-    a_cerebriposterior: 'A. cerebri posterior',
+   
+    
+
+
     sinus_transversus: 'Sinus transversus',
     n_trigeminus: 'N. trigeminus',
     n_vestibulocochlearis: 'N. vestibulocochlearis',
@@ -147,7 +191,21 @@ node_names = {
     aqueductus_cerebri: 'Aqueductus cerebri'
 }
 
-invivo_allviews_list = [Ventriculus_lateralis,
+invivo_allviews_list = [a_basilaris,
+                        a_carotisinterna,
+                        a_cerebelli_inferior_anterior,
+                        a_cerebelli_inferior_posterior,
+                        a_cerebelli_superior,
+                        a_cerebri_anterior,
+                        a_cerebri_media,
+                        a_cerebri_posterior,
+                        a_communicans_anterior,
+                        a_communicans_posterior,
+                        a_vertebralis,
+
+
+
+Ventriculus_lateralis,
 Hippocampus,
 Nervus_opticus,
 Dura_mater,
@@ -157,10 +215,10 @@ chiasma_opticus,
 tractus_opticus,
 tentorium_cerebelli,
 n_trochlearis,
-a_carotisinterna,
-a_vertebralis,
-a_basilaris,
-a_cerebriposterior,
+
+
+
+
 sinus_transversus,
 n_trigeminus,
 n_vestibulocochlearis,
