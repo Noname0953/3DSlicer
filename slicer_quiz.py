@@ -62,18 +62,30 @@ a_cerebri_posterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducial
 a_communicans_anterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 a_communicans_posterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 a_vertebralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+amygdala = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+foramen_magendie = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+aqueductus_cerebri = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+capsula_extrema = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+capsula_externa = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+capsula_interna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+chiasma_opticum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+colliculus_inferior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+colliculus_superior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+commisura_anterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+confluens_sinuum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
+hippocampus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
 Ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 Corpus_callosum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-Hippocampus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+
 Nervus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 Dura_mater = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 cerebellum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 pons = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-chiasma_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+
 tractus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tentorium_cerebelli = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 n_trochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -88,13 +100,7 @@ n_fascialis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', '
 nucleus_caudatus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 putamen = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 thalamus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-capsula_interna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-capsula_externa = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-capsula_extrema = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 ventriculus_quartus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-globus_pallidus_externa = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-globus_pallidus_interna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-aqueductus_cerebri = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 # Set the positions of nodes
 a_basilaris.AddControlPoint(2.117,-13.342,-36.126)
@@ -108,24 +114,34 @@ a_cerebri_posterior.AddControlPoint(-6.432,-7.957,-13.319)
 a_communicans_anterior.AddControlPoint(0.647,11.978,-13.922)
 a_communicans_posterior.AddControlPoint(-9.190,-2.305,-17.512)
 a_vertebralis.AddControlPoint(-7.2983,-37.9725,-51.7110)
+amygdala.AddControlPoint(-25.540,-14.891,-11.279)
+foramen_magendie.AddControlPoint(1.864,-48.538,-49.338)
+aqueductus_cerebri.AddControlPoint(0.169,-31.340,-5.577)
+capsula_extrema.AddControlPoint(34.902,7.800,0.502)
+capsula_externa.AddControlPoint(31.966,7.800,0.418)
+capsula_interna.AddControlPoint(16.4213,10.6528,5.9804)
+chiasma_opticum.AddControlPoint(-0.3038,5.3050,-13.6747)
+colliculus_inferior.AddControlPoint(5.196,-36.707,-8.114)
+colliculus_superior.AddControlPoint(5.196,-32.695,-2.031)
+commisura_anterior.AddControlPoint(0,0,0)
+confluens_sinuum.AddControlPoint(-10.347,-89.269,-28.472)
 
+
+hippocampus.AddControlPoint(-23.944,-14.091,-18.506)
 
 
 
 Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
 Corpus_callosum.AddControlPoint(0.0357, -10.7357, 24.7500)
-Hippocampus.AddControlPoint(-23.25, -11.41, -19.19)
+
 Nervus_opticus.AddControlPoint(21.0266, 32.9091, -20.211)
 Dura_mater.AddControlPoint(-10.3420, 36.0077, 61.3329)
 cerebellum.AddControlPoint(0.5339,-54.6794,-27.6747)
 pons.AddControlPoint(0.0339,-25.9000,-27.6748)
-chiasma_opticus.AddControlPoint(-0.3038,5.3050,-13.6747)
+
 tractus_opticus.AddControlPoint(-9.5054,-3.8966,-9.1747)
 tentorium_cerebelli.AddControlPoint(-9.5054, -63.7734,-9.2014)
 n_trochlearis.AddControlPoint(11.2952,-36.2650,-10.1671)
-
-
-
 
 sinus_transversus.AddControlPoint(-15.9745,-90.0629,-32.9464)
 n_trigeminus.AddControlPoint(-17.3793,-24.3338,-25.2110)
@@ -135,13 +151,10 @@ n_fascialis.AddControlPoint(18.0032,-28.1689,-35.7110)
 nucleus_caudatus.AddControlPoint(11.6773,11.2457,11.6539)
 putamen.AddControlPoint(24.7232,-0.6141,11.6539)
 thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
-capsula_interna.AddControlPoint(16.4213,10.6528,5.9804)
-capsula_externa.AddControlPoint(29.0020,5.6287,4.4804)
-capsula_extrema.AddControlPoint(31.0476,7.5464,1.2135)
 ventriculus_quartus.AddControlPoint(0.329,-41.764,-25.818)
 globus_pallidus_externa.AddControlPoint(15.7509,4.3509,-3.3735)
 globus_pallidus_interna.AddControlPoint(17.0080,-3.8205,-3.3735)
-aqueductus_cerebri.AddControlPoint(0.169,-31.340,-5.577)
+
 
 # Define a dictionary that maps nodes to their names
 node_names = {
@@ -156,18 +169,30 @@ node_names = {
     a_communicans_anterior: 'A. communicans posterior',
     a_communicans_posterior: 'A. communicans posterior',
     a_vertebralis: 'A. vertebralis',
+    amygdala: 'Amygdala',
+    foramen_magendie: 'Foramen Magendie eller Apertura mediana ventriculi quarti',
+    aqueductus_cerebri: 'Aqueductus cerebri/mesencephali',
+    capsula_extrema: 'Capsula extrema',
+    capsula_externa: 'Capsula externa',
+    capsula_interna: 'Capsula interna',
+    chiasma_opticum: 'Chiasma Opticum',
+    colliculus_inferior: 'Colliculus inferior',
+    colliculus_superior: 'Colliculus superior',
+    commisura_anterior: 'Commisura anterior',
+    confluens_sinuum: 'Confluens sinuum',
     
     
+    hippocampus: 'Hippocampus',
     
     
     Ventriculus_lateralis: 'Ventriculus Lateralis',
     Corpus_callosum: 'Corpus Callosum',
-    Hippocampus: 'Hippocampus',
+    
     Nervus_opticus: 'Nervus Opticus',
     Dura_mater: 'Dura mater',
     cerebellum: 'Cerebellum',
     pons: 'Pons',
-    chiasma_opticus: 'Chiasma Opticus',
+    
     tractus_opticus: 'Tractus Opticus',
     tentorium_cerebelli: 'Tentorium Cerebelli',
     n_trochlearis: 'N. trochlearis',
@@ -182,13 +207,9 @@ node_names = {
     nucleus_caudatus: 'Nucleus caudatus',
     putamen: 'Putamen',
     thalamus: 'Thalamus',
-    capsula_interna: 'Capsula interna',
-    capsula_externa: 'Capsula externa',
-    capsula_extrema: 'Capsula extrema',
     ventriculus_quartus: 'Ventriculus quartus',
     globus_pallidus_externa: 'Globus Pallidus Externa',
-    globus_pallidus_interna: 'Globus Pallidus Interna',
-    aqueductus_cerebri: 'Aqueductus cerebri'
+    globus_pallidus_interna: 'Globus Pallidus Interna'
 }
 
 invivo_allviews_list = [a_basilaris,
@@ -202,16 +223,24 @@ invivo_allviews_list = [a_basilaris,
                         a_communicans_anterior,
                         a_communicans_posterior,
                         a_vertebralis,
-
-
-
+                        foramen_magendie,
+                        aqueductus_cerebri,
+                        capsula_interna,
+                        chiasma_opticum,
+                        colliculus_inferior,
+                        colliculus_superior,
+                        commisura_anterior,
+                        confluens_sinuum,
+                        
+                        
+                        
 Ventriculus_lateralis,
-Hippocampus,
+
 Nervus_opticus,
 Dura_mater,
 cerebellum,
 pons,
-chiasma_opticus,
+
 tractus_opticus,
 tentorium_cerebelli,
 n_trochlearis,
@@ -226,16 +255,18 @@ n_fascialis,
 nucleus_caudatus,
 putamen,
 thalamus,
-capsula_interna,
-capsula_externa,
-capsula_extrema,
-ventriculus_quartus,
-aqueductus_cerebri]
+
+
+ventriculus_quartus]
 
 exvivo_allviews_list = [globus_pallidus_externa,
-globus_pallidus_interna]
+                       globus_pallidus_interna
+                       capsula_extrema,
+                       capsula_externa]
 
-bigbrain_allviews_list = [Corpus_callosum]
+bigbrain_allviews_list = [Corpus_callosum,
+                         amygdala,
+                         hippocampus]
 
 # Convert the collection to a Python list of nodes
 my_nodes = bigbrain_allviews_list + invivo_allviews_list + exvivo_allviews_list
