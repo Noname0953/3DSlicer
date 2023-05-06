@@ -77,16 +77,27 @@ corpus_callosum_rostrum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFidu
 corpus_callosum_corpus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 corpus_callosum_genu = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 corpus_callosum_splenium = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+corpus_geniculatum_laterale = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+corpus_geniculatum_mediale = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+corpus_mamillare = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+cortex_orbitofrontalis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+cortex_piriformis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+crus_cerebri = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+dura_mater = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+fissura_longitudinalis_cerebi = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+flocculus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+foramen_interventriculare = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+globus_pallidus_externa = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+globus_pallidus_interna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
 hippocampus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
 Ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-Corpus_callosum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 Nervus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-Dura_mater = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+
 cerebellum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 pons = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
@@ -133,6 +144,18 @@ corpus_callosum_rostrum.AddControlPoint(0.500,15.640,6.846)
 corpus_callosum_corpus.AddControlPoint(0.500,-5.327,25.224)
 corpus_callosum_genu.AddControlPoint(0.500,21.852,15.647)
 corpus_callosum_splenium.AddControlPoint(0.500,-36.130,9.823)
+corpus_geniculatum_laterale.AddControlPoint(-23.736,-22.850,-5.674)
+corpus_geniculatum_mediale.AddControlPoint(-15.848,-25.698,-5.674)
+corpus_mamillare.AddControlPoint(-2.746,-8.524,-14.707)
+cortex_orbitofrontalis.AddControlPoint(5.099,42.016,-22.294)
+cortex_piriformis.AddControlPoint(-20.447,-4.560,-13.944)
+crus_cerebri.AddControlPoint(-17.680,-18.261,-13.051)
+dura_mater.AddControlPoint(-10.3420,36.0077,61.3329)
+fissura_longitudinalis_cerebi.AddControlPoint(-1.467,30.546,38.912)
+flocculus.AddControlPoint(-6.856,-52.550,-31.737)
+foramen_interventriculare.AddControlPoint(3.628,-3.473,5.976)
+globus_pallidus_externa.AddControlPoint(21.616,-1.234,-1.774)
+globus_pallidus_interna.AddControlPoint(17.0080,-3.8205,-3.3735)
 
 
 hippocampus.AddControlPoint(-23.944,-14.091,-18.506)
@@ -140,10 +163,9 @@ hippocampus.AddControlPoint(-23.944,-14.091,-18.506)
 
 
 Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
-Corpus_callosum.AddControlPoint(0.0357, -10.7357, 24.7500)
 
 Nervus_opticus.AddControlPoint(21.0266, 32.9091, -20.211)
-Dura_mater.AddControlPoint(-10.3420, 36.0077, 61.3329)
+
 cerebellum.AddControlPoint(0.5339,-54.6794,-27.6747)
 pons.AddControlPoint(0.0339,-25.9000,-27.6748)
 
@@ -160,8 +182,6 @@ nucleus_caudatus.AddControlPoint(11.6773,11.2457,11.6539)
 putamen.AddControlPoint(24.7232,-0.6141,11.6539)
 thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
 ventriculus_quartus.AddControlPoint(0.329,-41.764,-25.818)
-globus_pallidus_externa.AddControlPoint(15.7509,4.3509,-3.3735)
-globus_pallidus_interna.AddControlPoint(17.0080,-3.8205,-3.3735)
 
 
 # Define a dictionary that maps nodes to their names
@@ -191,17 +211,28 @@ node_names = {
     corpus_callosum_rostrum: 'Corpus callosum rostrum',
     corpus_callosum_corpus: 'Corpus callosum corpus/truncus',
     corpus_callosum_genu: 'Corpus callosum genu',
-    corpus_callosum_splenium: 'Corpus callosum splenium'
+    corpus_callosum_splenium: 'Corpus callosum splenium',
+    corpus_geniculatum_laterale: 'Corpus geniculatum laterale',
+    corpus_geniculatum_mediale: 'Corpus geniculatum mediale',
+    corpus_mamillare: 'Corpus mamillare',
+    cortex_orbitofrontalis: 'Cortex orbitofrontalis',
+    cortex_piriformis: 'Cortex piriformis',
+    crus_cerebri: 'Crus cerebri',
+    dura_mater: 'Dura mater',
+    fissura_longitudinalis_cerebi: 'Fissura longitudinalis cerebri',
+    flocculus: 'Flocculus',
+    foramen_interventriculare: 'Foramen interventriculare eller Foramen Monroi',
+    globus_pallidus_externa: 'Globus Pallidus Externa',
+    globus_pallidus_interna: 'Globus Pallidus Interna',
     
     
     hippocampus: 'Hippocampus',
     
     
     Ventriculus_lateralis: 'Ventriculus Lateralis',
-    Corpus_callosum: 'Corpus Callosum',
     
     Nervus_opticus: 'Nervus Opticus',
-    Dura_mater: 'Dura mater',
+    
     cerebellum: 'Cerebellum',
     pons: 'Pons',
     
@@ -220,8 +251,8 @@ node_names = {
     putamen: 'Putamen',
     thalamus: 'Thalamus',
     ventriculus_quartus: 'Ventriculus quartus',
-    globus_pallidus_externa: 'Globus Pallidus Externa',
-    globus_pallidus_interna: 'Globus Pallidus Interna'
+    globus_pallidus_externa: 'Globus pallidus externa',
+    globus_pallidus_interna: 'Globus pallidus interna'
 }
 
 invivo_allviews_list = [a_basilaris,
@@ -247,13 +278,18 @@ invivo_allviews_list = [a_basilaris,
                         corpus_callosum_corpus,
                         corpus_callosum_genu,
                         corpus_callosum_splenium,
+                        cortex_piriformis,
+                        dura_mater,
+                        fissura_longitudinalis_cerebi,
+                        flocculus,
+                        foramen_interventriculare,
                         
                         
                         
 Ventriculus_lateralis,
 
 Nervus_opticus,
-Dura_mater,
+
 cerebellum,
 pons,
 
@@ -275,14 +311,18 @@ thalamus,
 
 ventriculus_quartus]
 
-exvivo_allviews_list = [globus_pallidus_externa,
-                       globus_pallidus_interna
-                       capsula_extrema,
-                       capsula_externa]
+exvivo_allviews_list = [capsula_extrema,
+                       capsula_externa,
+                       corpus_mamillare,
+                       cortex_orbitofrontalis,
+                       crus_cerebri,
+                       globus_pallidus_externa,
+                       globus_pallidus_interna]
 
-bigbrain_allviews_list = [Corpus_callosum,
-                         amygdala,
-                         hippocampus]
+bigbrain_allviews_list = [amygdala,
+                         hippocampus,
+                         corpus_geniculatum_laterale,
+                         corpus_geniculatum_mediale]
 
 # Convert the collection to a Python list of nodes
 my_nodes = bigbrain_allviews_list + invivo_allviews_list + exvivo_allviews_list
