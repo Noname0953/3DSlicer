@@ -73,6 +73,10 @@ colliculus_inferior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducial
 colliculus_superior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 commisura_anterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 confluens_sinuum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+corpus_callosum_rostrum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+corpus_callosum_corpus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+corpus_callosum_genu = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+corpus_callosum_splenium = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
 hippocampus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -125,6 +129,10 @@ colliculus_inferior.AddControlPoint(5.196,-36.707,-8.114)
 colliculus_superior.AddControlPoint(5.196,-32.695,-2.031)
 commisura_anterior.AddControlPoint(0,0,0)
 confluens_sinuum.AddControlPoint(-10.347,-89.269,-28.472)
+corpus_callosum_rostrum.AddControlPoint(0.500,15.640,6.846)
+corpus_callosum_corpus.AddControlPoint(0.500,-5.327,25.224)
+corpus_callosum_genu.AddControlPoint(0.500,21.852,15.647)
+corpus_callosum_splenium.AddControlPoint(0.500,-36.130,9.823)
 
 
 hippocampus.AddControlPoint(-23.944,-14.091,-18.506)
@@ -180,6 +188,10 @@ node_names = {
     colliculus_superior: 'Colliculus superior',
     commisura_anterior: 'Commisura anterior',
     confluens_sinuum: 'Confluens sinuum',
+    corpus_callosum_rostrum: 'Corpus callosum rostrum',
+    corpus_callosum_corpus: 'Corpus callosum corpus/truncus',
+    corpus_callosum_genu: 'Corpus callosum genu',
+    corpus_callosum_splenium: 'Corpus callosum splenium'
     
     
     hippocampus: 'Hippocampus',
@@ -231,6 +243,10 @@ invivo_allviews_list = [a_basilaris,
                         colliculus_superior,
                         commisura_anterior,
                         confluens_sinuum,
+                        corpus_callosum_rostrum,
+                        corpus_callosum_corpus,
+                        corpus_callosum_genu,
+                        corpus_callosum_splenium,
                         
                         
                         
