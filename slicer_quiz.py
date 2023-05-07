@@ -381,7 +381,7 @@ exvivo_allviews_list = [capsula_extrema,
                        gyrus_frontalis_superior,
                        gyrus_parahippocampalis,
                        gyrus_postcentralis,
-                       gyrus_precentralis
+                       gyrus_precentralis,
                        sulcus_parietooccipitalis,
                        sulcus_precentralis,
                        sulcus_centralis,
