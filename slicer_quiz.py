@@ -1,7 +1,7 @@
 import random
 import sys
 
-print("Quiz time! Scriptet styrs av kortkommandon. Enter för facit 'd' för att ta bort strukturen från listan eller 'c' för att recentrera på punkten. 'f' för statistik.")
+print("Quiz time! Scriptet styrs av kortkommandon. 'y' för facit, 'd' för att ta bort strukturen från listan eller 'c' för att recentrera på punkten. 'f' för statistik.")
 
 def clear_all_markers():
     # Get all fiducial nodes in the scene
@@ -312,7 +312,7 @@ def quiz_node(node):
             n.SetDisplayVisibility(False)
     # Prompt the user to identify the structure associated with the node
     user_input = ''
-    while user_input not in ['y', 'n']:
+    while user_input not in ['y', 'n', 'c', 'd', 'f', 'q']:
         try:
             user_input = input("Vilken struktur är markerad? ")
         except EOFError:
@@ -320,7 +320,7 @@ def quiz_node(node):
         # Check user input
         if user_input == 'y':
             print(str(node_names[node]))
-            right_wrong = input('Fick du rätt? (y/n) ')
+            right_wrong = input("Fick du rätt? (y/n) ")
             if right_wrong == 'y':
                 global right
                 right += 1
@@ -358,8 +358,6 @@ def quiz_node(node):
                 scene.RemoveNode(node)
                 print(node_names[node]+" borttagen.")
                 print(str(len(my_nodes))+" strukturer kvar i listan.")
-        else:
-            user_input = 'y'
 right = 0
 wrong = 0
 def main():
