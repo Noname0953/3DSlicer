@@ -1,7 +1,7 @@
 import random
 import sys
 
-print("Quiz time! Scriptet styrs av kortkommandon. 'y' för facit 'n' för att ta bort strukturen från listan eller 'c' för att recentrera på punkten. 'f' för statistik.")
+print("Quiz time! Scriptet styrs av kortkommandon. Enter för facit 'd' för att ta bort strukturen från listan eller 'c' för att recentrera på punkten. 'f' för statistik.")
 
 def clear_all_markers():
     # Get all fiducial nodes in the scene
@@ -211,11 +211,11 @@ node_names = {
     foramen_interventriculare: 'Foramen interventriculare eller Foramen Monroi',
     globus_pallidus_externa: 'Globus Pallidus Externa',
     globus_pallidus_interna: 'Globus Pallidus Interna',
-    
-    
+
+
     hippocampus: 'Hippocampus',
-    
-    
+
+
     Ventriculus_lateralis: 'Ventriculus Lateralis',
     Nervus_opticus: 'Nervus Opticus',
     cerebellum: 'Cerebellum',
@@ -263,9 +263,9 @@ invivo_allviews_list = [a_basilaris,
                         fissura_longitudinalis_cerebi,
                         flocculus,
                         foramen_interventriculare,
-                        
-                        
-                        
+
+
+
                         Ventriculus_lateralis,
                         Nervus_opticus,
                         cerebellum,
@@ -349,7 +349,7 @@ def quiz_node(node):
                 print("Strukturer du svarat fel på: ")
                 for error in error_structures:
                     print(str(node_names[error]))
-        elif user_input == 'n':
+        elif user_input == 'd':
             # Removes node from list
             if len(my_nodes) == 1:
                 print("Listan är nu tom!")
