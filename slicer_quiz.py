@@ -89,9 +89,17 @@ flocculus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' '
 foramen_interventriculare = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 globus_pallidus_externa = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 globus_pallidus_interna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_temporalis_transversus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_angularis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_cinguli = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_frontalis_inferior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_frontalis_medius = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_frontalis_superior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_parahippocampalis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
 hippocampus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sulcus_parietooccipitalis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
 Ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -149,10 +157,17 @@ flocculus.AddControlPoint(-6.856,-52.550,-31.737)
 foramen_interventriculare.AddControlPoint(3.628,-3.473,5.976)
 globus_pallidus_externa.AddControlPoint(21.616,-1.234,-1.774)
 globus_pallidus_interna.AddControlPoint(17.0080,-3.8205,-3.3735)
+gyrus_temporalis_transversus.AddControlPoint(-51.313,-18.486,7.458)
+gyrus_angularis.AddControlPoint(-39.391,-69.268,46.773)
+gyrus_cinguli.AddControlPoint(-5.245,-4.321,35.217)
+gyrus_frontalis_inferior.AddControlPoint(-51.080,-1.339,25.231)
+gyrus_frontalis_medius.AddControlPoint(-32.673,11.790,48.564)
+gyrus_frontalis_superior.AddControlPoint(-12.732,34.249,48.564)
+gyrus_parahippocampalis.AddControlPoint(-24.318,-23.765,-21.301)
 
 
 hippocampus.AddControlPoint(-23.944,-14.091,-18.506)
-
+sulcus_parietooccipitalis.AddControlPoint(-8.986,-82.441,32.071)
 
 Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
 Nervus_opticus.AddControlPoint(21.0266, 32.9091, -20.211)
@@ -211,9 +226,17 @@ node_names = {
     foramen_interventriculare: 'Foramen interventriculare eller Foramen Monroi',
     globus_pallidus_externa: 'Globus Pallidus Externa',
     globus_pallidus_interna: 'Globus Pallidus Interna',
-
+    gyrus_temporalis_transversus: 'Gyrus temporalis transversus',
+    gyrus_angularis: 'Gyrus angularis',
+    gyrus_cinguli: 'Gyrus cinguli',
+    gyrus_frontalis_inferior: 'Gyrus frontalis inferior',
+    gyrus_frontalis_medius: 'Gyrus frontalis medius',
+    gyrus_frontalis_superior: 'Gyrus frontalis superior',
+    gyrus_parahippocampalis: 'Gyrus parahippocampalis',
+    
 
     hippocampus: 'Hippocampus',
+    sulcus_parietooccipitalis: 'Sulcus parietooccipitalis',
 
 
     Ventriculus_lateralis: 'Ventriculus Lateralis',
@@ -288,12 +311,21 @@ exvivo_allviews_list = [capsula_extrema,
                        cortex_orbitofrontalis,
                        crus_cerebri,
                        globus_pallidus_externa,
-                       globus_pallidus_interna]
+                       globus_pallidus_interna,
+                       gyrus_angularis,
+                       gyrus_cinguli,
+                       gyrus_frontalis_inferior,
+                       gyrus_frontalis_medius,
+                       gyrus_frontalis_superior,
+                       gyrus_parahippocampalis,
+                       
+                       sulcus_parietooccipitalis]
 
 bigbrain_allviews_list = [amygdala,
                          hippocampus,
                          corpus_geniculatum_laterale,
-                         corpus_geniculatum_mediale]
+                         corpus_geniculatum_mediale,
+                         gyrus_temporalis_transversus]
 
 # Convert the collection to a Python list of nodes
 my_nodes = bigbrain_allviews_list + invivo_allviews_list + exvivo_allviews_list
