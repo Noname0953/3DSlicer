@@ -121,6 +121,10 @@ nucleus_caudatus_cauda = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiduc
 nucleus_caudatus_corpus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 nucleus_caudatus_caput = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 nucleus_ruber = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nucleus_olivaris = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+pedunculus_cerebellaris_inferior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+pedunculus_cerebellaris_medius = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+pedunculus_cerebellaris_superior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
 Ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -204,6 +208,10 @@ nucleus_caudatus_cauda.AddControlPoint(25.532,-36.829,6.423)
 nucleus_caudatus_corpus.AddControlPoint(-16.076,3.638,16.684)
 nucleus_caudatus_caput.AddControlPoint( -9.950,9.921,4.173)
 nucleus_ruber.AddControlPoint(-5.604,-19.104,-10.645)
+nucleus_olivaris.AddControlPoint(5.090,-37.300,-54.174)
+pedunculus_cerebellaris_inferior.AddControlPoint(9.747,-42.201,-38.788)
+pedunculus_cerebellaris_medius.AddControlPoint(16.123,-34.786,-34.702)
+pedunculus_cerebellaris_superior.AddControlPoint(-4.838,-41.456,-25.656)
 
 
 Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
@@ -289,6 +297,10 @@ node_names = {
     nucleus_caudatus_corpus: 'Nucleus caudatus corpus',
     nucleus_caudatus_caput: 'Nucleus caudatus caput',
     nucleus_ruber: 'Nucleus ruber',
+    nucleus_olivaris: 'Nucleus olivaris eller Oliva',
+    pedunculus_cerebellaris_inferior: 'Pedunculus cerebellaris inferior',
+    pedunculus_cerebellaris_medius: 'Pedunculus cerebellaris medius',
+    pedunculus_cerebellaris_superior: 'Pedunculus cerebellaris superior',
 
 
     Ventriculus_lateralis: 'Ventriculus Lateralis',
@@ -299,9 +311,7 @@ node_names = {
     sinus_transversus: 'Sinus transversus',
     putamen: 'Putamen',
     thalamus: 'Thalamus',
-    ventriculus_quartus: 'Ventriculus quartus',
-    globus_pallidus_externa: 'Globus pallidus externa',
-    globus_pallidus_interna: 'Globus pallidus interna'
+    ventriculus_quartus: 'Ventriculus quartus'
 }
 
 invivo_allviews_list = [a_basilaris,
@@ -345,7 +355,7 @@ invivo_allviews_list = [a_basilaris,
                         nucleus_caudatus_cauda,
                         nucleus_caudatus_corpus,
                         nucleus_caudatus_caput,
-                        
+
 
                         Ventriculus_lateralis,
                         cerebellum,
@@ -379,7 +389,11 @@ exvivo_allviews_list = [capsula_extrema,
                        gyrus_supramarginalis,
                        gyrus_temporalis_superior,
                        gyrus_temporalis_media,
-                       gyrus_temporalis_inferior]
+                       gyrus_temporalis_inferior,
+                       nucleus_olivaris,
+                       pedunculus_cerebellaris_inferior,
+                       pedunculus_cerebellaris_medius,
+                       pedunculus_cerebellaris_superior]
 
 bigbrain_allviews_list = [amygdala,
                          hippocampus,
