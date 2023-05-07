@@ -89,23 +89,50 @@ flocculus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' '
 foramen_interventriculare = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 globus_pallidus_externa = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 globus_pallidus_interna = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-
-
+gyrus_temporalis_transversus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_angularis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_cinguli = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_frontalis_inferior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_frontalis_medius = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_frontalis_superior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_parahippocampalis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_postcentralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_precentralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sulcus_parietooccipitalis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 hippocampus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sulcus_precentralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sulcus_centralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sulcus_postcentralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_supramarginalis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_temporalis_superior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_temporalis_media = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_temporalis_inferior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+hypothalamus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+infundibulum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+lobus_cerebelli_anterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+lobus_cerebelli_posterior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+medulla_oblongata = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nervus_fascialis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nervus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nervus_trigeminus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nervus_trochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nervus_vestibulocochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nucleus_caudatus_cauda = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nucleus_caudatus_corpus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nucleus_caudatus_caput = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nucleus_ruber = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nucleus_olivaris = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+pedunculus_cerebellaris_inferior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+pedunculus_cerebellaris_medius = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+pedunculus_cerebellaris_superior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
 Ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-Nervus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 cerebellum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 pons = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tractus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tentorium_cerebelli = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-n_trochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 sinus_transversus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-n_trigeminus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-n_vestibulocochlearis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-n_fascialis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-nucleus_caudatus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 putamen = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 thalamus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 ventriculus_quartus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -149,24 +176,51 @@ flocculus.AddControlPoint(-6.856,-52.550,-31.737)
 foramen_interventriculare.AddControlPoint(3.628,-3.473,5.976)
 globus_pallidus_externa.AddControlPoint(21.616,-1.234,-1.774)
 globus_pallidus_interna.AddControlPoint(17.0080,-3.8205,-3.3735)
-
-
+gyrus_temporalis_transversus.AddControlPoint(-51.313,-18.486,7.458)
+gyrus_angularis.AddControlPoint(-39.391,-69.268,46.773)
+gyrus_cinguli.AddControlPoint(-5.245,-4.321,35.217)
+gyrus_frontalis_inferior.AddControlPoint(-51.080,-1.339,25.231)
+gyrus_frontalis_medius.AddControlPoint(-32.673,11.790,48.564)
+gyrus_frontalis_superior.AddControlPoint(-12.732,34.249,48.564)
+gyrus_parahippocampalis.AddControlPoint(-24.318,-23.765,-21.301)
+gyrus_postcentralis.AddControlPoint(-57.458,-32.516,39.861)
+gyrus_precentralis.AddControlPoint(-45.376,-25.636,53.236)
+sulcus_parietooccipitalis.AddControlPoint(-8.986,-82.441,32.071)
 hippocampus.AddControlPoint(-23.944,-14.091,-18.506)
+sulcus_precentralis.AddControlPoint(-45.376,-17.422,47.042)
+sulcus_centralis.AddControlPoint(-51.615,-29.405,49.985)
+sulcus_postcentralis.AddControlPoint(-58.688,-39.187,40.463)
+gyrus_supramarginalis.AddControlPoint(-60.547,-40.301,26.786)
+gyrus_temporalis_superior.AddControlPoint(-61.047,-38.165,13.463)
+gyrus_temporalis_media.AddControlPoint(-62.110,-26.572,-9.658)
+gyrus_temporalis_inferior.AddControlPoint(-60.748,-43.785,-14.662)
+hypothalamus.AddControlPoint(0.080,0.211,-11.460)
+infundibulum.AddControlPoint(0.580,1.823,-15.124)
+lobus_cerebelli_anterior.AddControlPoint(10.973,-53.935,-16.900)
+lobus_cerebelli_posterior.AddControlPoint(19.782,-75.532,-37.940)
+medulla_oblongata.AddControlPoint(1.030,-40.093,-52.135)
+nervus_fascialis.AddControlPoint(17.827,-28.288,-35.711)
+nervus_opticus.AddControlPoint(21.252,32.909,-19.435)
+nervus_trigeminus.AddControlPoint(-17.3793,-24.3338,-25.2110)
+nervus_trochlearis.AddControlPoint(11.2952,-36.2650,-10.1671)
+nervus_vestibulocochlearis.AddControlPoint(20.1049,-30.4617,-36.2110)
+nucleus_caudatus_cauda.AddControlPoint(25.532,-36.829,6.423)
+nucleus_caudatus_corpus.AddControlPoint(-16.076,3.638,16.684)
+nucleus_caudatus_caput.AddControlPoint( -9.950,9.921,4.173)
+nucleus_ruber.AddControlPoint(-5.604,-19.104,-10.645)
+nucleus_olivaris.AddControlPoint(5.090,-37.300,-54.174)
+pedunculus_cerebellaris_inferior.AddControlPoint(9.747,-42.201,-38.788)
+pedunculus_cerebellaris_medius.AddControlPoint(16.123,-34.786,-34.702)
+pedunculus_cerebellaris_superior.AddControlPoint(-4.838,-41.456,-25.656)
 
 
 Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
-Nervus_opticus.AddControlPoint(21.0266, 32.9091, -20.211)
 cerebellum.AddControlPoint(0.5339,-54.6794,-27.6747)
 pons.AddControlPoint(0.0339,-25.9000,-27.6748)
 tractus_opticus.AddControlPoint(-9.5054,-3.8966,-9.1747)
 tentorium_cerebelli.AddControlPoint(-9.5054, -63.7734,-9.2014)
-n_trochlearis.AddControlPoint(11.2952,-36.2650,-10.1671)
 sinus_transversus.AddControlPoint(-15.9745,-90.0629,-32.9464)
-n_trigeminus.AddControlPoint(-17.3793,-24.3338,-25.2110)
-n_vestibulocochlearis.AddControlPoint(20.1049,-30.4617,-36.2110)
-n_fascialis.AddControlPoint(18.0032,-28.1689,-35.7110)
 #29-04-2023
-nucleus_caudatus.AddControlPoint(11.6773,11.2457,11.6539)
 putamen.AddControlPoint(24.7232,-0.6141,11.6539)
 thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
 ventriculus_quartus.AddControlPoint(0.329,-41.764,-25.818)
@@ -211,28 +265,53 @@ node_names = {
     foramen_interventriculare: 'Foramen interventriculare eller Foramen Monroi',
     globus_pallidus_externa: 'Globus Pallidus Externa',
     globus_pallidus_interna: 'Globus Pallidus Interna',
-
-
+    gyrus_temporalis_transversus: 'Gyrus temporalis transversus',
+    gyrus_angularis: 'Gyrus angularis',
+    gyrus_cinguli: 'Gyrus cinguli',
+    gyrus_frontalis_inferior: 'Gyrus frontalis inferior',
+    gyrus_frontalis_medius: 'Gyrus frontalis medius',
+    gyrus_frontalis_superior: 'Gyrus frontalis superior',
+    gyrus_parahippocampalis: 'Gyrus parahippocampalis',
+    gyrus_postcentralis: 'Gyrus postcentralis',
+    gyrus_precentralis: 'Gyrus precentralis',
+    sulcus_parietooccipitalis: 'Sulcus parietooccipitalis',
     hippocampus: 'Hippocampus',
+    sulcus_precentralis: 'Sulcus precentralis',
+    sulcus_centralis: 'Sulcus centralis',
+    sulcus_postcentralis: 'Sulcus postcentralis',
+    gyrus_supramarginalis: 'Gyrus supramarginalis',
+    gyrus_temporalis_superior: 'Gyrus temporalis superior',
+    gyrus_temporalis_media: 'Gyrus temporalis media',
+    gyrus_temporalis_inferior: 'Gyrus temporalis inferior',
+    hypothalamus: 'Hypothalamus',
+    infundibulum: 'Infundibulum',
+    lobus_cerebelli_anterior: 'Lobus cerebelli anterior',
+    lobus_cerebelli_posterior: 'Lobus cerebelli posterior',
+    medulla_oblongata: 'Medulla oblongata',
+    nervus_fascialis: 'Nervus fascialis',
+    nervus_opticus: 'Nervus opticus',
+    nervus_trigeminus: 'Nervus trigeminus',
+    nervus_trochlearis: 'Nervus trochlearis',
+    nervus_vestibulocochlearis: 'Nervus vestibulocochlearis',
+    nucleus_caudatus_cauda: 'Nucleus caudatus cauda',
+    nucleus_caudatus_corpus: 'Nucleus caudatus corpus',
+    nucleus_caudatus_caput: 'Nucleus caudatus caput',
+    nucleus_ruber: 'Nucleus ruber',
+    nucleus_olivaris: 'Nucleus olivaris eller Oliva',
+    pedunculus_cerebellaris_inferior: 'Pedunculus cerebellaris inferior',
+    pedunculus_cerebellaris_medius: 'Pedunculus cerebellaris medius',
+    pedunculus_cerebellaris_superior: 'Pedunculus cerebellaris superior',
 
 
     Ventriculus_lateralis: 'Ventriculus Lateralis',
-    Nervus_opticus: 'Nervus Opticus',
     cerebellum: 'Cerebellum',
     pons: 'Pons',
     tractus_opticus: 'Tractus Opticus',
     tentorium_cerebelli: 'Tentorium Cerebelli',
-    n_trochlearis: 'N. trochlearis',
     sinus_transversus: 'Sinus transversus',
-    n_trigeminus: 'N. trigeminus',
-    n_vestibulocochlearis: 'N. vestibulocochlearis',
-    n_fascialis: 'N. fascialis',
-    nucleus_caudatus: 'Nucleus caudatus',
     putamen: 'Putamen',
     thalamus: 'Thalamus',
-    ventriculus_quartus: 'Ventriculus quartus',
-    globus_pallidus_externa: 'Globus pallidus externa',
-    globus_pallidus_interna: 'Globus pallidus interna'
+    ventriculus_quartus: 'Ventriculus quartus'
 }
 
 invivo_allviews_list = [a_basilaris,
@@ -263,21 +342,27 @@ invivo_allviews_list = [a_basilaris,
                         fissura_longitudinalis_cerebi,
                         flocculus,
                         foramen_interventriculare,
-
+                        hypothalamus,
+                        infundibulum,
+                        lobus_cerebelli_anterior,
+                        lobus_cerebelli_posterior,
+                        medulla_oblongata,
+                        nervus_fascialis,
+                        nervus_opticus,
+                        nervus_trigeminus,
+                        nervus_trochlearis,
+                        nervus_vestibulocochlearis,
+                        nucleus_caudatus_cauda,
+                        nucleus_caudatus_corpus,
+                        nucleus_caudatus_caput,
 
 
                         Ventriculus_lateralis,
-                        Nervus_opticus,
                         cerebellum,
                         pons,
                         tractus_opticus,
                         tentorium_cerebelli,
-                        n_trochlearis,
                         sinus_transversus,
-                        n_trigeminus,
-                        n_vestibulocochlearis,
-                        n_fascialis,
-                        nucleus_caudatus,
                         putamen,
                         thalamus,
                         ventriculus_quartus]
@@ -288,12 +373,34 @@ exvivo_allviews_list = [capsula_extrema,
                        cortex_orbitofrontalis,
                        crus_cerebri,
                        globus_pallidus_externa,
-                       globus_pallidus_interna]
+                       globus_pallidus_interna,
+                       gyrus_angularis,
+                       gyrus_cinguli,
+                       gyrus_frontalis_inferior,
+                       gyrus_frontalis_medius,
+                       gyrus_frontalis_superior,
+                       gyrus_parahippocampalis,
+                       gyrus_postcentralis,
+                       gyrus_precentralis,
+                       sulcus_parietooccipitalis,
+                       sulcus_precentralis,
+                       sulcus_centralis,
+                       sulcus_postcentralis,
+                       gyrus_supramarginalis,
+                       gyrus_temporalis_superior,
+                       gyrus_temporalis_media,
+                       gyrus_temporalis_inferior,
+                       nucleus_olivaris,
+                       pedunculus_cerebellaris_inferior,
+                       pedunculus_cerebellaris_medius,
+                       pedunculus_cerebellaris_superior]
 
 bigbrain_allviews_list = [amygdala,
                          hippocampus,
                          corpus_geniculatum_laterale,
-                         corpus_geniculatum_mediale]
+                         corpus_geniculatum_mediale,
+                         gyrus_temporalis_transversus,
+                         nucleus_ruber]
 
 # Convert the collection to a Python list of nodes
 my_nodes = bigbrain_allviews_list + invivo_allviews_list + exvivo_allviews_list
