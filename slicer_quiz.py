@@ -1,7 +1,7 @@
 import random
 import sys
 
-print("Quiz time! Scriptet styrs av kortkommandon. 'y' för facit, 'd' för att ta bort strukturen från listan eller 'c' för att recentrera på punkten. 'f' för statistik.")
+print("Quiz time! Scriptet styrs av kortkommandon. 'y' för facit, 'd' för att ta bort strukturen från listan eller 'c' för att recentrera på punkten. Tryck 'r' för att ta tillbaka den senast borttagna strukturen. 'f' för statistik.")
 
 def clear_all_markers():
     # Get all fiducial nodes in the scene
@@ -402,6 +402,8 @@ bigbrain_allviews_list = [amygdala,
                          gyrus_temporalis_transversus,
                          nucleus_ruber]
 
+removed_structures = []
+
 # Convert the collection to a Python list of nodes
 my_nodes = bigbrain_allviews_list + invivo_allviews_list + exvivo_allviews_list
 
@@ -458,6 +460,7 @@ def quiz_node(node):
                     print(str(node_names[error]))
         elif user_input == 'd':
             # Removes node from list
+            removed_structures.append(node)
             if len(my_nodes) == 1:
                 print("Listan är nu tom!")
             else:
@@ -465,6 +468,19 @@ def quiz_node(node):
                 scene.RemoveNode(node)
                 print(node_names[node]+" borttagen.")
                 print(str(len(my_nodes))+" strukturer kvar i listan.")
+        elif user_input == 'r':
+            # Add last removed structure back to the list
+            if len(removed_structures) > 0:
+                if len(removed_structures) == 1:
+                    removed_node = removed_structures[0]
+                else:
+                    removed_node = removed_structures[-1]
+                my_nodes.append(removed_node)
+                removed_structures.remove(removed_node)
+                print(node_names[removed_node] + " åter tillagd i listan.")
+            else:
+                print("Du har inte tagit bort några strukturer än!")
+
 right = 0
 wrong = 0
 def main():
