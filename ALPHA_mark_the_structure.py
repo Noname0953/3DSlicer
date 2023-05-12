@@ -1,7 +1,7 @@
 import random
 import sys
 
-print("Quiz time! Scriptet styrs av kortkommandon. 'y' för facit, 'd' för att ta bort strukturen från listan eller 'c' för att recentrera på punkten. Tryck 'r' för att ta tillbaka den senast borttagna strukturen. 'f' för statistik.")
+print("Markera den efterfrågade strukturen. När du är nöjd med din markering trycker du 'f' för facit. Tryck 's' för facit.")
 
 def clear_all_markers():
     # Get all fiducial nodes in the scene
@@ -407,82 +407,50 @@ removed_structures = []
 # Convert the collection to a Python list of nodes
 my_nodes = bigbrain_allviews_list + invivo_allviews_list + exvivo_allviews_list
 
+redLogic.SetSliceOffset(0)
+greenLogic.SetSliceOffset(0)
+yellowLogic.SetSliceOffset(0)
+
 # Define a function to prompt the user to identify the structure associated with a given node
 def quiz_node(node):
-    # Sets only the current node to be visible
+    user_input = ''
     for n in my_nodes:
-        if n == node:
-            # Change slice position
+        n.SetDisplayVisibility(False)
+    # Prompt the user to identify the structure associated with the node
+    while user_input not in ['y', 'n', 'c', 'd', 'f', 'q']:
+        try:
+            user_input = input(node_names[node] + " ")
+        except EOFError:
+            user_input = 'f'
+        # Check user input
+        if user_input == 'f':
+            my_nodes.remove(node)
             redLogic.SetSliceOffset(node.GetNthControlPointPositionVector(0)[2])
             greenLogic.SetSliceOffset(node.GetNthControlPointPositionVector(0)[1])
             yellowLogic.SetSliceOffset(node.GetNthControlPointPositionVector(0)[0])
-            n.SetDisplayVisibility(True)
-        else:
-            n.SetDisplayVisibility(False)
-    # Prompt the user to identify the structure associated with the node
-    user_input = ''
-    while user_input not in ['y', 'n', 'c', 'd', 'f', 'q']:
-        try:
-            user_input = input("Vilken struktur är markerad? ")
-        except EOFError:
-            user_input = 'y'
-        # Check user input
-        if user_input == 'y':
-            print(str(node_names[node]))
+            node.SetDisplayVisibility(True)
             right_wrong = input("Fick du rätt? (y/n) ")
+            redLogic.SetSliceOffset(0)
+            greenLogic.SetSliceOffset(0)
+            yellowLogic.SetSliceOffset(0)
             if right_wrong == 'y':
                 global right
                 right += 1
-                print("Mäktigt.")
+                print("Snyggt! Tar bort strukturen från listan.")
+                scene.RemoveNode(node)
             if right_wrong == 'n':
                 global wrong
                 wrong += 1
-                error_structures.append(node)
-                print("Snart finns även den här strukturen i din hippocampus. Försök igen!")
-            else:
-                pass
-        elif user_input == 'c':
-            # Change slice position
-            redLogic.SetSliceOffset(node.GetNthControlPointPositionVector(0)[2])
-            greenLogic.SetSliceOffset(node.GetNthControlPointPositionVector(0)[1])
-            yellowLogic.SetSliceOffset(node.GetNthControlPointPositionVector(0)[0])
-            n.SetDisplayVisibility(True)
-        elif user_input == 'f':
-            # Gives statistics on current quiz run
-            if right+wrong == 0:
-                print("Du måste svara på någon struktur innan du kan få ut statistik!")
-            else:
-                print(str(right) + " rätt")
-                print(str(wrong) + " fel")
-                print(str(round(100*(right/(right+wrong)),1))+"%")
-                print("Strukturer du svarat fel på: ")
-                for error in error_structures:
-                    print(str(node_names[error]))
-        elif user_input == 'd':
-            # Removes node from list
-            removed_structures.append(node)
-            if len(my_nodes) == 1:
-                print("Listan är nu tom!")
-            else:
-                my_nodes.remove(node)
-                scene.RemoveNode(node)
-                print(node_names[node]+" borttagen.")
-                print(str(len(my_nodes))+" strukturer kvar i listan.")
-        elif user_input == 'r':
-            # Add last removed structure back to the list
-            if len(removed_structures) > 0:
-                if len(removed_structures) == 1:
-                    removed_node = removed_structures[0]
-                else:
-                    removed_node = removed_structures[-1]
-                my_nodes.append(removed_node)
-                removed_structures.remove(removed_node)
-                print(node_names[removed_node] + " åter tillagd i listan.")
-            else:
-                print("Du har inte tagit bort några strukturer än!")
+                print("Strukturen kommer vara kvar i listan tills du får rätt.")
+                my_nodes.append(node)
+        if user_input == 's':
+            print(str(len(my_nodes)) + " strukturer kvar.")
+            print(str(right) + " rätt.")
+            print(str(wrong) + " fel.")
 
 right = 0
 wrong = 0
+
 def main():
     while True:
         # Select a random node from the list of nodes
