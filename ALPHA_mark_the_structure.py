@@ -1,7 +1,7 @@
 import random
 import sys
 
-print("Markera den efterfrågade strukturen. När du är nöjd med din markering trycker du 'f' för facit. Tryck 's' för facit.")
+print("Markera den efterfrågade strukturen. När du är nöjd med din markering trycker du 'f' för facit. Tryck 's' för statistik.")
 
 def clear_all_markers():
     # Get all fiducial nodes in the scene
@@ -125,16 +125,26 @@ nucleus_olivaris = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNod
 pedunculus_cerebellaris_inferior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 pedunculus_cerebellaris_medius = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 pedunculus_cerebellaris_superior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+planum_temporale = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+pons = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+putamen = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+pyramis_medullae_oblongatae = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+septum_pellucidum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sinus_rectus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sinus_sagittalis_superior = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sinus_sigmoideus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+substantia_nigra = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sulcus_calcarinus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+sulcus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+thalamus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+tonsilla = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
 Ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 cerebellum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-pons = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tractus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tentorium_cerebelli = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 sinus_transversus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-putamen = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-thalamus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 ventriculus_quartus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 # Set the positions of nodes
@@ -212,30 +222,46 @@ nucleus_olivaris.AddControlPoint(5.090,-37.300,-54.174)
 pedunculus_cerebellaris_inferior.AddControlPoint(9.747,-42.201,-38.788)
 pedunculus_cerebellaris_medius.AddControlPoint(16.123,-34.786,-34.702)
 pedunculus_cerebellaris_superior.AddControlPoint(-4.838,-41.456,-25.656)
+planum_temporale.AddControlPoint(-49.939,-32.159,8.181)
+pons.AddControlPoint(0.0339,-25.9000,-27.6748)
+putamen.AddControlPoint(28.345,-0.614,-3.021)
+pyramis_medullae_oblongatae.AddControlPoint(-3.903,-34.181,-53.877)
+septum_pellucidum.AddControlPoint(-0.043,12.008,10.522)
+sinus_rectus.AddControlPoint(-1.626,-66.076,-7.615)
+sinus_sagittalis_superior.AddControlPoint(-1.031,-73.862,54.061)
+sinus_sigmoideus.AddControlPoint(-54.325,-44.213,-34.315)
+substantia_nigra.AddControlPoint(-6.939,-16.970,-17.106)
+sulcus_calcarinus.AddControlPoint(-3.839,-78.273,6.529)
+sulcus_lateralis.AddControlPoint(-52.838,0,0)
+thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
+tonsilla.AddControlPoint(-5.316,-51.792,-39.754)
 
 
 Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
 cerebellum.AddControlPoint(0.5339,-54.6794,-27.6747)
-pons.AddControlPoint(0.0339,-25.9000,-27.6748)
 tractus_opticus.AddControlPoint(-9.5054,-3.8966,-9.1747)
 tentorium_cerebelli.AddControlPoint(-9.5054, -63.7734,-9.2014)
 sinus_transversus.AddControlPoint(-15.9745,-90.0629,-32.9464)
 #29-04-2023
-putamen.AddControlPoint(24.7232,-0.6141,11.6539)
-thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
 ventriculus_quartus.AddControlPoint(0.329,-41.764,-25.818)
 
+base_class = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+
+def func(x,y,z):
+    retr = base_class.AddControlPoint(x,y,z)
+    return retr
+
 # Define a dictionary that maps nodes to their names
-node_names = {
-    a_basilaris: 'A. basilaris',
-    a_carotisinterna: 'A. carotis interna',
+node_dictionary = {
+    'A. basilaris': 2.117,-13.342,-36.126,
+    'A. carotis interna': -18.5652,-7.1370,-40.5675,
     a_cerebelli_inferior_anterior: 'A. cerebelli inferior anterior',
     a_cerebelli_inferior_posterior: 'A. cerebelli inferior posterior',
     a_cerebelli_superior: 'A. cerebelli superior',
     a_cerebri_anterior: 'A. cerebri anterior',
     a_cerebri_media: 'A. cerebri media',
     a_cerebri_posterior: 'A. cerebri posterior',
-    a_communicans_anterior: 'A. communicans posterior',
+    a_communicans_anterior: 'A. communicans anterior',
     a_communicans_posterior: 'A. communicans posterior',
     a_vertebralis: 'A. vertebralis',
     amygdala: 'Amygdala',
@@ -301,16 +327,26 @@ node_names = {
     pedunculus_cerebellaris_inferior: 'Pedunculus cerebellaris inferior',
     pedunculus_cerebellaris_medius: 'Pedunculus cerebellaris medius',
     pedunculus_cerebellaris_superior: 'Pedunculus cerebellaris superior',
+    planum_temporale: 'Planum temporale',
+    pons: 'Pons',
+    putamen: 'Putamen',
+    pyramis_medullae_oblongatae: 'Pyramis medullae oblongatae',
+    septum_pellucidum: 'Septum pellucidum',
+    sinus_rectus: 'Sinus rectus',
+    sinus_sagittalis_superior: 'Sinus sagittalis superior',
+    sinus_sigmoideus: 'Sinus sigmoideus',
+    substantia_nigra: 'Substantia nigra',
+    sulcus_calcarinus: 'Sulcus calcarinus',
+    sulcus_lateralis: 'Sulcus lateralis',
+    thalamus: 'Thalamus',
+    tonsilla: 'Tonsilla (cerebelli)',
 
 
     Ventriculus_lateralis: 'Ventriculus Lateralis',
     cerebellum: 'Cerebellum',
-    pons: 'Pons',
     tractus_opticus: 'Tractus Opticus',
     tentorium_cerebelli: 'Tentorium Cerebelli',
     sinus_transversus: 'Sinus transversus',
-    putamen: 'Putamen',
-    thalamus: 'Thalamus',
     ventriculus_quartus: 'Ventriculus quartus'
 }
 
@@ -355,16 +391,20 @@ invivo_allviews_list = [a_basilaris,
                         nucleus_caudatus_cauda,
                         nucleus_caudatus_corpus,
                         nucleus_caudatus_caput,
+                        pons,
+                        putamen,
+                        sinus_rectus,
+                        sinus_sagittalis_superior,
+                        sinus_sigmoideus,
+                        thalamus,
+                        tonsilla,
 
 
                         Ventriculus_lateralis,
                         cerebellum,
-                        pons,
                         tractus_opticus,
                         tentorium_cerebelli,
                         sinus_transversus,
-                        putamen,
-                        thalamus,
                         ventriculus_quartus]
 
 exvivo_allviews_list = [capsula_extrema,
@@ -393,14 +433,20 @@ exvivo_allviews_list = [capsula_extrema,
                        nucleus_olivaris,
                        pedunculus_cerebellaris_inferior,
                        pedunculus_cerebellaris_medius,
-                       pedunculus_cerebellaris_superior]
+                       pedunculus_cerebellaris_superior,
+                       planum_temporale,
+                       pyramis_medullae_oblongatae,
+                       septum_pellucidum]
 
 bigbrain_allviews_list = [amygdala,
                          hippocampus,
                          corpus_geniculatum_laterale,
                          corpus_geniculatum_mediale,
                          gyrus_temporalis_transversus,
-                         nucleus_ruber]
+                         nucleus_ruber,
+                         substantia_nigra,
+                         sulcus_calcarinus,
+                         sulcus_lateralis]
 
 removed_structures = []
 
