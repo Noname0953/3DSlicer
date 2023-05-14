@@ -138,12 +138,22 @@ my_nodes = [
     ['Sulcus lateralis',-52.838,0,0,'bigbrain'],
     ['Thalamus',9.3054,-18.4039,11.4804,'invivo'],
     ['Tonsilla',-5.316,-51.792,-39.754,'invivo'],
-    ['Ventriculus lateralis',9, -11.4, 23,'invivo'],
+    ['Uncus',-23.874,-5.046,-20.041,'exvivo'],
+    ['Ventriculus lateralis',9,-11.4,23,'invivo'],
+    ['Ventriculus quartus',0.329,-41.764,-25.818,'invivo'],
+    ['Ventriculus tertius',0.000,-22.764,1.500,'invivo'],
+    ['Claustrum',34.388,-3.305,-5.019,'exvivo'],
+    ['Fornix',-0.339,1.030,9.262,'exvivo'],
+    ['Centrum semiovale',-28.271,-1.684,41.687,'exvivo'],
+    ['Fimbria',-32.562,-26.690,-10.290,'exvivo'],
+    ['Gyrus subcallosus',-2.851,9.991,-4.865,'exvivo'],
+    ['Nucleus dentatus',-16.669,-58.050,-35.779,'bigbrain'],
+
+
     ['Cerebellum',0.5339,-54.6794,-27.6747,'invivo'],
     ['Tractus opticus',-9.5054,-3.8966,-9.1747,'invivo'],
     ['Tentorium cerebelli',-9.5054, -63.7734,-9.2014,'invivo'],
     ['Sinus transversus',-15.9745,-90.0629,-32.9464,'invivo'],
-    ['Ventriculus quartus',0.329,-41.764,-25.818,'invivo']
     ]
 
 redLogic.SetSliceOffset(0)
