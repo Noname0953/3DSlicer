@@ -138,7 +138,6 @@ sulcus_calcarinus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNo
 sulcus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 thalamus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tonsilla = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-uncus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 ventriculus_quartus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 ventriculus_tertius = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -243,7 +242,6 @@ sulcus_calcarinus.AddControlPoint(-3.839,-78.273,6.529)
 sulcus_lateralis.AddControlPoint(-52.838,0,0)
 thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
 tonsilla.AddControlPoint(-5.316,-51.792,-39.754)
-uncus.AddControlPoint(-23.874,-5.046,-20.041)
 ventriculus_lateralis.AddControlPoint(9,-11.4,23)
 ventriculus_quartus.AddControlPoint(0.329,-41.764,-25.818)
 ventriculus_tertius.AddControlPoint(0.000,-22.764,1.500)
@@ -350,7 +348,6 @@ node_names = {
     sulcus_lateralis: 'Sulcus lateralis',
     thalamus: 'Thalamus',
     tonsilla: 'Tonsilla (cerebelli)',
-    uncus: 'Uncus',
     ventriculus_lateralis: 'Ventriculus lateralis',
     ventriculus_quartus: 'Ventriculus quartus',
     ventriculus_tertius: 'Ventriculus tertius',
@@ -456,7 +453,6 @@ exvivo_allviews_list = [capsula_extrema,
                        planum_temporale,
                        pyramis_medullae_oblongatae,
                        septum_pellucidum,
-                       uncus,
                        claustrum,
                        fornix,
                        centrum_semiovale,
