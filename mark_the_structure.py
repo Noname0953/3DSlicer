@@ -138,7 +138,6 @@ my_nodes = [
     ['Sulcus lateralis',-52.838,0,0,'bigbrain'],
     ['Thalamus',9.3054,-18.4039,11.4804,'invivo'],
     ['Tonsilla',-5.316,-51.792,-39.754,'invivo'],
-    ['Uncus',-23.874,-5.046,-20.041,'exvivo'],
     ['Ventriculus lateralis',9,-11.4,23,'invivo'],
     ['Ventriculus quartus',0.329,-41.764,-25.818,'invivo'],
     ['Ventriculus tertius',0.000,-22.764,1.500,'invivo'],
