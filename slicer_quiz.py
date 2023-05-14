@@ -461,7 +461,7 @@ def quiz_node(node):
             n.SetDisplayVisibility(False)
     # Prompt the user to identify the structure associated with the node
     user_input = ''
-    while user_input not in ['y', 'n', 'c', 'd', 'f', 'q']:
+    while user_input not in ['y', 'n', 'd', 'q']:
         try:
             user_input = input("Vilken struktur är markerad? ")
         except EOFError:
