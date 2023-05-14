@@ -138,14 +138,21 @@ sulcus_calcarinus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNo
 sulcus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 thalamus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tonsilla = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+ventriculus_quartus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+ventriculus_tertius = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+claustrum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+fornix = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+centrum_semiovale = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+fimbria = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_subcallosus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nucleus_dentatus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
-Ventriculus_lateralis = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 cerebellum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tractus_opticus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 tentorium_cerebelli = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 sinus_transversus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
-ventriculus_quartus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 # Set the positions of nodes
 a_basilaris.AddControlPoint(2.117,-13.342,-36.126)
@@ -235,15 +242,22 @@ sulcus_calcarinus.AddControlPoint(-3.839,-78.273,6.529)
 sulcus_lateralis.AddControlPoint(-52.838,0,0)
 thalamus.AddControlPoint(9.3054,-18.4039,11.4804)
 tonsilla.AddControlPoint(-5.316,-51.792,-39.754)
+ventriculus_lateralis.AddControlPoint(9,-11.4,23)
+ventriculus_quartus.AddControlPoint(0.329,-41.764,-25.818)
+ventriculus_tertius.AddControlPoint(0.000,-22.764,1.500)
+claustrum.AddControlPoint(34.388,-3.305,-5.019)
+fornix.AddControlPoint(-0.339,1.030,9.262)
+centrum_semiovale.AddControlPoint(-28.271,-1.684,41.687)
+fimbria.AddControlPoint(-32.562,-26.690,-10.290)
+gyrus_subcallosus.AddControlPoint(-2.851,9.991,-4.865)
+nucleus_dentatus.AddControlPoint(-16.669,-58.050,-35.779)
 
 
-Ventriculus_lateralis.AddControlPoint(9, -11.4, 23)
 cerebellum.AddControlPoint(0.5339,-54.6794,-27.6747)
 tractus_opticus.AddControlPoint(-9.5054,-3.8966,-9.1747)
 tentorium_cerebelli.AddControlPoint(-9.5054, -63.7734,-9.2014)
 sinus_transversus.AddControlPoint(-15.9745,-90.0629,-32.9464)
 #29-04-2023
-ventriculus_quartus.AddControlPoint(0.329,-41.764,-25.818)
 
 # Define a dictionary that maps nodes to their names
 node_names = {
@@ -334,14 +348,21 @@ node_names = {
     sulcus_lateralis: 'Sulcus lateralis',
     thalamus: 'Thalamus',
     tonsilla: 'Tonsilla (cerebelli)',
+    ventriculus_lateralis: 'Ventriculus lateralis',
+    ventriculus_quartus: 'Ventriculus quartus',
+    ventriculus_tertius: 'Ventriculus tertius',
+    claustrum: 'Claustrum',
+    fornix: 'Fornix',
+    centrum_semiovale: 'Centrum semiovale',
+    fimbria: 'Fimbria',
+    gyrus_subcallosus: 'Gyrus subcallosus',
+    nucleus_dentatus: 'Nucleus dentatus',
 
 
-    Ventriculus_lateralis: 'Ventriculus Lateralis',
     cerebellum: 'Cerebellum',
     tractus_opticus: 'Tractus Opticus',
     tentorium_cerebelli: 'Tentorium Cerebelli',
-    sinus_transversus: 'Sinus transversus',
-    ventriculus_quartus: 'Ventriculus quartus'
+    sinus_transversus: 'Sinus transversus'
 }
 
 invivo_allviews_list = [a_basilaris,
@@ -392,14 +413,15 @@ invivo_allviews_list = [a_basilaris,
                         sinus_sigmoideus,
                         thalamus,
                         tonsilla,
+                        ventriculus_lateralis,
+                        ventriculus_quartus,
+                        ventriculus_tertius,
 
 
-                        Ventriculus_lateralis,
                         cerebellum,
                         tractus_opticus,
                         tentorium_cerebelli,
-                        sinus_transversus,
-                        ventriculus_quartus]
+                        sinus_transversus]
 
 exvivo_allviews_list = [capsula_extrema,
                        capsula_externa,
@@ -430,7 +452,12 @@ exvivo_allviews_list = [capsula_extrema,
                        pedunculus_cerebellaris_superior,
                        planum_temporale,
                        pyramis_medullae_oblongatae,
-                       septum_pellucidum]
+                       septum_pellucidum,
+                       claustrum,
+                       fornix,
+                       centrum_semiovale,
+                       fimbria,
+                       gyrus_subcallosus]
 
 bigbrain_allviews_list = [amygdala,
                          hippocampus,
@@ -440,7 +467,8 @@ bigbrain_allviews_list = [amygdala,
                          nucleus_ruber,
                          substantia_nigra,
                          sulcus_calcarinus,
-                         sulcus_lateralis]
+                         sulcus_lateralis,
+                         nucleus_dentatus]
 
 removed_structures = []
 
@@ -461,7 +489,7 @@ def quiz_node(node):
             n.SetDisplayVisibility(False)
     # Prompt the user to identify the structure associated with the node
     user_input = ''
-    while user_input not in ['y', 'n', 'c', 'd', 'f', 'q']:
+    while user_input not in ['y', 'n', 'd', 'q']:
         try:
             user_input = input("Vilken struktur är markerad? ")
         except EOFError:
