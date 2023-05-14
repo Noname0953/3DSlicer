@@ -145,6 +145,9 @@ ventriculus_tertius = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducial
 claustrum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 fornix = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 centrum_semiovale = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+fimbria = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+gyrus_subcallosus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
+nucleus_dentatus = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
 
 
 cerebellum = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
@@ -247,6 +250,9 @@ ventriculus_tertius.AddControlPoint(0.000,-22.764,1.500)
 claustrum.AddControlPoint(34.388,-3.305,-5.019)
 fornix.AddControlPoint(-0.339,1.030,9.262)
 centrum_semiovale.AddControlPoint(-28.271,-1.684,41.687)
+fimbria.AddControlPoint(-32.562,-26.690,-10.290)
+gyrus_subcallosus.AddControlPoint(-2.851,9.991,-4.865)
+nucleus_dentatus.AddControlPoint(-16.669,-58.050,-35.779)
 
 
 cerebellum.AddControlPoint(0.5339,-54.6794,-27.6747)
@@ -351,6 +357,9 @@ node_names = {
     claustrum: 'Claustrum',
     fornix: 'Fornix',
     centrum_semiovale: 'Centrum semiovale',
+    fimbria: 'Fimbria',
+    gyrus_subcallosus: 'Gyrus subcallosus',
+    nucleus_dentatus: 'Nucleus dentatus',
 
 
     cerebellum: 'Cerebellum',
@@ -450,7 +459,9 @@ exvivo_allviews_list = [capsula_extrema,
                        uncus,
                        claustrum,
                        fornix,
-                       centrum_semiovale]
+                       centrum_semiovale,
+                       fimbria,
+                       gyrus_subcallosus]
 
 bigbrain_allviews_list = [amygdala,
                          hippocampus,
@@ -460,7 +471,8 @@ bigbrain_allviews_list = [amygdala,
                          nucleus_ruber,
                          substantia_nigra,
                          sulcus_calcarinus,
-                         sulcus_lateralis]
+                         sulcus_lateralis,
+                         nucleus_dentatus]
 
 removed_structures = []
 
