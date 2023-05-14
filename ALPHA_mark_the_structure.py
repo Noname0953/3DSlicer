@@ -489,10 +489,17 @@ def quiz_node(node):
                 wrong += 1
                 print("Strukturen kommer vara kvar i listan tills du får rätt.")
                 my_nodes.append(node)
-        if user_input == 's':
+        elif user_input == 's':
             print(str(len(my_nodes)) + " strukturer kvar.")
             print(str(right) + " rätt.")
             print(str(wrong) + " fel.")
+        else:
+            for n in my_nodes:
+                if user_input == n[0]:
+                    redLogic.SetSliceOffset(n.GetNthControlPointPositionVector(0)[2])
+                    greenLogic.SetSliceOffset(n.GetNthControlPointPositionVector(0)[1])
+                    yellowLogic.SetSliceOffset(n.GetNthControlPointPositionVector(0)[0])
+                    n.SetDisplayVisibility(True)
 
 right = 0
 wrong = 0
