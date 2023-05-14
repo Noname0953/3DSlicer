@@ -6,7 +6,6 @@ print("Markera den efterfrågade strukturen. När du är nöjd med din markering
 def clear_all_markers():
     # Get all fiducial nodes in the scene
     fiducial_nodes = slicer.util.getNodesByClass("vtkMRMLMarkupsFiducialNode")
-
     # Remove each fiducial node from the scene
     for node in fiducial_nodes:
         scene.RemoveNode(node)
@@ -49,7 +48,8 @@ yellow = layoutManager.sliceWidget("Yellow")
 redLogic = red.sliceLogic()
 greenLogic = green.sliceLogic()
 yellowLogic = yellow.sliceLogic()
-# Define a dictionary that maps nodes to their names
+
+# Define a list of structure lists
 my_nodes = [
     ['A. basilaris', 2.117, -13.342, -36.126, 'invivo'],
     ['A. carotis interna', -18.5652, -7.1370, -40.5675, 'invivo'],
@@ -62,7 +62,7 @@ my_nodes = [
     ['A. communicans anterior',0.647,11.978,-13.922,'invivo'],
     ['A. communicans posterior',-9.190,-2.305,-17.512,'invivo'],
     ['A. vertebralis',-7.2983,-37.9725,-51.7110,'invivo'],
-    ['Amygdala',-25.540,-14.891,-11.279,'bigbrain'],
+    ['Amygdala',-21.2982,-2.5985,-15.9190,'bigbrain'],
     ['Foramen Magendie eller Apertura mediana ventriculi quarti',1.864,-48.538,-49.338,'invivo'],
     ['Aqueductus cerebri/mesencephali',0.169,-31.340,-5.577,'invivo'],
     ['Capsula extrema',34.902,7.800,0.502,'exvivo'],
@@ -96,12 +96,12 @@ my_nodes = [
     ['Gyrus frontalis medius',-32.673,11.790,48.564,'exvivo'],
     ['Gyrus frontalis superior',-12.732,34.249,48.564,'exvivo'],
     ['Gyrus parahippocampalis',-24.318,-23.765,-21.301,'exvivo'],
-    ['Gyrus postcentralis',-57.458,-32.516,39.861,'exvivo'],
-    ['Gyrus precentralis',-45.376,-25.636,53.236,'exvivo'],
+    ['Gyrus postcentralis',-49.9681,-17.7000,60.9956,'exvivo'],
+    ['Gyrus precentralis',-37.6719,-16.2534,68.9521,'exvivo'],
     ['Sulcus parietooccipitalis',-8.986,-82.441,32.071,'exvivo'],
     ['Hippocampus',-23.944,-14.091,-18.506,'bigbrain'],
     ['Sulcus precentralis',-45.376,-17.422,47.042,'exvivo'],
-    ['Sulcus centralis',-51.615,-29.405,49.985,'exvivo'],
+    ['Sulcus centralis',-39.8418,-19.4748,49.4234,'exvivo'],
     ['Sulcus postcentralis',-58.688,-39.187,40.463,'exvivo'],
     ['Gyrus supramarginalis',-60.547,-40.301,26.786,'exvivo'],
     ['Gyrus temporalis superior',-61.047,-38.165,13.463,'exvivo'],
@@ -161,6 +161,7 @@ yellowLogic.SetSliceOffset(0)
 
 # Define a function to prompt the user to identify the structure associated with a given node
 def quiz_node(node):
+    base_node = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
     user_input = ''
     # Prompt the user to identify the structure associated with the node
     if len(my_nodes) == 0:
@@ -169,10 +170,9 @@ def quiz_node(node):
         try:
             user_input = input(node[0] + " ")
         except EOFError:
-            user_input = 'f'
+            user_input = ''
         # Check user input
         if user_input == 'f':
-            base_node = slicer.mrmlScene.AddNewNodeByClass('vtkMRMLMarkupsFiducialNode', ' ')
             base_node.AddControlPoint(node[1],node[2],node[3])
             redLogic.SetSliceOffset(base_node.GetNthControlPointPositionVector(0)[2])
             greenLogic.SetSliceOffset(base_node.GetNthControlPointPositionVector(0)[1])
@@ -192,13 +192,22 @@ def quiz_node(node):
                 wrong += 1
                 print("Strukturen kommer vara kvar i listan tills du får rätt.")
                 scene.RemoveNode(base_node)
-        if user_input == 's':
+        elif user_input == 's':
             if right + wrong == 0:
                 print("Du måste svara på någon struktur innan du kan få ut statistik.")
             else:
                 print(str(len(my_nodes)) + " strukturer kvar.")
                 print(str(right) + " rätt.")
                 print(str(wrong) + " fel.")
+        else:
+            #Unmark this code for search function when testing new structures
+            #for n in my_nodes:
+            #    if user_input.lower() == n[0].lower():
+            #        base_node.AddControlPoint(n[1],n[2],n[3])
+            #        redLogic.SetSliceOffset(base_node.GetNthControlPointPositionVector(0)[2])
+            #        greenLogic.SetSliceOffset(base_node.GetNthControlPointPositionVector(0)[1])
+            #        yellowLogic.SetSliceOffset(base_node.GetNthControlPointPositionVector(0)[0])
+            print("'f' för facit. 's' för statistik.")
 
 right = 0
 wrong = 0
