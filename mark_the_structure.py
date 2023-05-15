@@ -147,8 +147,11 @@ my_nodes = [
     ['Fimbria',-32.562,-26.690,-10.290,'exvivo'],
     ['Gyrus subcallosus',-2.851,9.991,-4.865,'exvivo'],
     ['Nucleus dentatus',-16.669,-58.050,-35.779,'bigbrain'],
-
-
+    ['Substantia grisea centralis (PAG)',-2.1662,-29.9256,-7.6500,'bigbrain'],
+    ['Glandula pineale', 0.8204,-31.3865,2.3500,'bigbrain'],
+    ['Stria medullaris thalami',-2.1710,-14.9335,7.5500,'bigbrain'],
+    ['Plexus choroideus ',23.2564,-14.0361,-15.2500,'bigbrains'],
+    ['Habenula',-3.3676,-25.4036,2.3500,'bigbrain'],
     ['Cerebellum',0.5339,-54.6794,-27.6747,'invivo'],
     ['Tractus opticus',-9.5054,-3.8966,-9.1747,'invivo'],
     ['Tentorium cerebelli',-9.5054, -63.7734,-9.2014,'invivo'],
