@@ -154,8 +154,22 @@ my_nodes = [
     ['Habenula',-3.3676,-25.4036,2.3500,'bigbrain'],
     ['Cerebellum',0.5339,-54.6794,-27.6747,'invivo'],
     ['Tractus opticus',-9.5054,-3.8966,-9.1747,'invivo'],
-    ['Tentorium cerebelli',-9.5054, -63.7734,-9.2014,'invivo'],
+    ['Tentorium cerebelli',-5.533, -63.7734,-9.2014,'invivo'],
     ['Sinus transversus',-15.9745,-90.0629,-32.9464,'invivo'],
+    ['Cerebrum',-28.135,-8.185,37.421,'invivo'],
+    ['Mesencephalon',0.256,-26.121,-11.501,'invivo'],
+    ['Diencephalon',6.527,-14.990,7.499,'invivo'],
+    ['Basala ganglierna',19.685,-0.700,-0.700,'exvivo'],
+    ['Vermis',-0.303,-56.876,-19.153,'exvivo'],
+    ['Lobus frontalis',-17.688,45.764,21.394,'exvivo'],
+    ['Lobus occipitalis',-20.477,-89.353,7.304,'exvivo'],
+    ['Lobus parietalis',-20.658,-54.647,50.295,'exvivo'],
+    ['Lobus temporalis',-42.426,-6.444,-26.981,'exvivo'],
+    ['Lobus insularis',-41.882,0.632,-2.855,'exvivo'],
+    ['Lobus limbicus',-5.809,-2.186,35.263,'exvivo'],
+    ['Hemispherium cerebelli',-29.415,-58.691,-41.412,'exvivo'],
+    ['Falx cerebri',-2.155,2.295,50.758,'invivo'],
+    ['Cortex prefrontalis',-18.246,52.508,0.775,'exvivo'],
     ]
 
 redLogic.SetSliceOffset(0)
